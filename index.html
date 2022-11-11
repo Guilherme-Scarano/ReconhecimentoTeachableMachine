@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Categorizador de pets</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"/>
+    <link rel="stylesheet" href="styles.css"/>
+
+
+  </head>
+  <body style="background-image: url(cc.jpg); background-repeat: no-repeat; background-size: 1880px 980px;">
+    <div class="container" style="text-align: center">
+      <div class="container" style="text-align: center">
+        <div class="jumbotron" style="background-color: transparent; color: rgb(89, 0, 255)">
+          <h1>Categorizador de pets</h1>
+        </div>
+
+      <div class="load-image">
+        <img id="preview" src="image1.png" width="250" alt="" />
+      </div>
+      <div class="send-image">
+        <label for="image_ts">
+          <p id="location-src">Clique para adicionar sua imagem</p>
+          <input
+            type="file"
+            name="image"
+            id="image_ts"
+            onchange="previewImage()"
+          />
+        </label>
+
+        <form onsubmit="return false;">
+
+          <button onclick="init()">Enviar<span class="spinner" onclick="init()"></span></button>
+       
+          </form>
+      
+        
+      <div class="display-4" id="label-container"></div>
+
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.3.1/dist/tf.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@0.8/dist/teachablemachine-image.min.js"></script>
+
+      
+    </div>
+  </body>
+</html>
